@@ -1,0 +1,27 @@
+<svg width="65" height="47" viewBox="0 0 65 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient-fill" x1="0" y1="0" x2="65" y2="47" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E6D535" />
+      <stop offset="100%" stop-color="#E53535" />
+    </linearGradient>
+    <clipPath id="clip0_120_1129">
+      <rect width="55.43" height="45.35" fill="white" transform="translate(4.9729)" />
+    </clipPath>
+    <clipPath id="clip1_120_1129">
+      <rect width="55.43" height="45.35" fill="white" transform="translate(4.9729)" />
+    </clipPath>
+    <clipPath id="clip2_120_1129">
+      <rect width="55.4278" height="45.35" fill="white" transform="translate(4.979)" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip0_120_1129)">
+    <g clip-path="url(#clip1_120_1129)">
+      <g clip-path="url(#clip2_120_1129)">
+        <path
+          d="M48.7916 24.3526C30.217 40.5236 10.4327 51.0673 5.90511 42.0175C1.74977 33.7118 19.1215 19.8072 22.2114 16.85C22.8601 16.2291 22.6063 15.8873 21.7559 16.1896C19.5292 16.9811 15.74 18.4244 5.19566 24.9444C5.10266 25.0019 4.979 24.9373 4.979 24.8279C4.979 24.7843 4.99935 24.7433 5.03406 24.7169C23.2666 10.8628 45.1667 0.666115 25.6888 20.4366C11.5331 34.805 50.4093 13.61 48.7916 6.13776C48.3655 4.16914 43.9103 2.73115 35.5501 7.23409C35.454 7.28586 35.3338 7.21821 35.3338 7.109C35.3338 7.05892 35.3605 7.01206 35.4032 6.98598C38.2711 5.23846 40.2008 4.28434 43.084 3.01555C66.6573 -7.35866 63.751 11.3291 48.7916 24.3526Z"
+          fill="url(#gradient-fill)"
+        />
+      </g>
+    </g>
+  </g>
+</svg>

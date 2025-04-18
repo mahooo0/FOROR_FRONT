@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.font_base {
+    font-family: 'Funnel Display', sans-serif;
+}
+body {
+    font-family: 'Funnel Display', sans-serif;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.text-inner-shadow {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3),
+        -1px -1px 0 rgba(255, 255, 255, 0.2);
+}
