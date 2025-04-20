@@ -49,12 +49,15 @@ export default function AboutHero() {
             <div className="flex xl:flex-row flex-col gap-10 w-full">
                 <div className="flex flex-col gap-4 xl:w-1/2 w-full justify-center">
                     <p className="text-base font-semibold">{Data?.preTitle}</p>
-                    <h1 className="text-5xl">{Data?.title} </h1>
-                    <p className="text-base opacity-70 col-span-1 max-sm:text-justify">
-                        {Data?.description}
-                    </p>
+                    <h1 className="text-4xl max-sm:text-2xl">{Data?.title} </h1>
+                    <div
+                        className="text-base opacity-70 col-span-1  max-sm:text-sm"
+                        dangerouslySetInnerHTML={{
+                            __html: Data?.description || '',
+                        }}
+                    ></div>
                 </div>
-                <div className="flex xl:w-1/2 w-full justify-center">
+                <div className="flex xl:w-1/2 w-full  sticky top-[80px]  max-h-[400px] justify-center">
                     <AnimatedImage img={Data?.image || ''} />
                 </div>
             </div>

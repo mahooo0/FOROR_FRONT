@@ -1,6 +1,8 @@
 import { BlackBtn } from '@/components/Buttons';
 import { useEffect } from 'react';
 import confetti from 'canvas-confetti';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Sucses() {
     // Trigger confetti when the component is mounted
@@ -47,24 +49,28 @@ export default function Sucses() {
 
         return () => clearInterval(interval);
     }, []); // Empty dependency array ensures it runs only once when the component is mounted
+    const { t } = useTranslation();
 
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center gap-7">
             <img
                 loading="lazy"
-                className="w-[30%]"
+                className="w-[30%] max-sm:w-[80%] max-md:w-[40%]"
                 src="/images/Sucses.png"
                 alt="Success"
             />
-            <h2 className="text-5xl font-bold">Services</h2>
-            <h3 className="text-[18px] max-sm:text-base font-medium opacity-60">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <h2 className="text-5xl max-sm:text-2xl text-center font-bold px-3">
+                {t('Sucses_title')}
+            </h2>
+            <h3 className="text-[18px] max-sm:text-base font-medium opacity-60 max-w-[60%] max-sm:max-w-[100%] px-0 max-sm:px-3 text-center">
+                {t('sucses_Desc')}{' '}
             </h3>
-
-            <BlackBtn
-                text={'Translation?.Submit'}
-                className="col-span-2 h-[48px] w-fit"
-            />
+            <Link to={'/'}>
+                <BlackBtn
+                    text={'Back to Home'}
+                    className="col-span-2 h-[48px] w-fit"
+                />
+            </Link>
         </div>
     );
 }

@@ -22,9 +22,11 @@ export type Layout3Props = React.ComponentPropsWithoutRef<'section'> &
 export const AboutDevHero = () => {
     const language = useStore((state) => state.Lang) || 'az';
 
-    const { data: Data, isLoading } = GETRequest<AbutDev>('rewue', 'rewue', [
-        language,
-    ]);
+    const { data: Data, isLoading } = GETRequest<AbutDev>(
+        'about-dev-hero',
+        'about-dev-hero',
+        [language]
+    );
     const { t } = useTranslation();
     if (isLoading) {
         // ⛔ Skeleton View
@@ -59,11 +61,17 @@ export const AboutDevHero = () => {
             </h2>
             <div className="">
                 <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
-                    <div className="order-2 md:order-1">
+                    <div className="order-2 md:order-1 gap-4 flex flex-col">
+                        <p className="md:text-md">{Data?.preTitle}</p>
                         <h2 className="rb-5 mb-5 text-xl font-bold md:mb-6 md:text-4xl lg:text-5xl">
                             {Data?.title}
                         </h2>
-                        <p className="md:text-md"> {Data?.description}</p>
+                        <div
+                            className="md:text-md"
+                            dangerouslySetInnerHTML={{
+                                __html: Data?.description || '',
+                            }}
+                        />
                     </div>
                     <div className="order-1 md:order-2 bg-[#222222]">
                         <img

@@ -60,6 +60,8 @@ i18n.use(LanguageDetector) // optional: detects user language
                     Next: 'Next',
                     'All rights reserved.': 'All rights reserved.',
                     'LEST MAKE A FOROR': "LET'S MAKE A FOR",
+                    'Back to Home': 'Back to Home',
+                    'Custom price': 'Custom price',
                 },
             },
             ru: {
@@ -98,6 +100,8 @@ i18n.use(LanguageDetector) // optional: detects user language
                     Pages: 'Страницы',
                     'LEST MAKE A FOROR': ' ПРОИЗВЕДЕМ ФОРОР',
                     'All rights reserved.': 'Все права защищены.',
+                    'Back to Home': 'Вернуться на главную',
+                    'Custom price': 'Индивидуальная цена',
                 },
             },
             az: {
@@ -136,6 +140,8 @@ i18n.use(LanguageDetector) // optional: detects user language
                     Pages: 'Səhifələr',
                     'LEST MAKE A FOROR': 'FOROR YARADAQ',
                     'All rights reserved.': ' Bütün hüquqlar qorunur.',
+                    'Back to Home': 'Ana səhifəyə qayıt',
+                    'Custom price': 'Xüsusi qiymət',
                 },
             },
         },

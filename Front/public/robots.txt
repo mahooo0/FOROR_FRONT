@@ -1,0 +1,4 @@
+# Allow all crawlers to index everything
+User-agent: *
+Disallow: /sucses
+Sitemap: >https://foror-front.vercel.app/sitemap.xml

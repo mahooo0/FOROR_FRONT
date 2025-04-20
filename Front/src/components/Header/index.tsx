@@ -13,9 +13,9 @@ export default function Header() {
             <div className="h-[72px] w-full relative  shadow flex justify-between items-center xl:px-[30px] px-[20px] max-sm:px-3">
                 <Nawbar />
                 <div className="flex flex-row gap-4 ">
-                    <Link to={'https://wa.me/966552660728'}>
+                    <Link to={'https://wa.me/966554414924'}>
                         <WhiteBtn
-                            text="+994 055 266 07 28"
+                            text="+994 055 441 49 24"
                             className="flex max-md:hidden"
                         />
                     </Link>

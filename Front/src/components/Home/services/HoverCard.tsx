@@ -29,7 +29,7 @@ const HoverCard = ({
                     }}
                 >
                     <div
-                        className={`absolute  top-0 left-[60px] transition-all duration-300 cursor-pointer ${
+                        className={`absolute  top-3 left-[60px] transition-all duration-300 cursor-pointer ${
                             hoveredIndex != 0 &&
                             hoveredIndex != 1 &&
                             'blur-[1px] opacity-40'
@@ -88,7 +88,7 @@ const HoverCard = ({
                     }}
                 >
                     <div
-                        className={`absolute top-0 right-[60px] flex flex-col justify-end items-end transition-all duration-300 cursor-pointer ${
+                        className={`absolute top-3 right-[60px] flex flex-col justify-end items-end transition-all duration-300 cursor-pointer ${
                             hoveredIndex != 0 &&
                             hoveredIndex != 2 &&
                             'blur-[1px] opacity-40'
@@ -146,7 +146,7 @@ const HoverCard = ({
                     }}
                 >
                     <div
-                        className={`absolute bottom-0 left-[60px] flex flex-col-reverse justify-start items-start transition-all duration-300 cursor-pointer ${
+                        className={`absolute bottom-3 left-[60px] flex flex-col-reverse justify-start items-start transition-all duration-300 cursor-pointer ${
                             hoveredIndex != 0 &&
                             hoveredIndex != 3 &&
                             'blur-[1px] opacity-40'
@@ -214,7 +214,7 @@ const HoverCard = ({
                     }}
                 >
                     <div
-                        className={`absolute bottom-0   z-10 right-[60px] flex flex-col-reverse justify-end items-end transition-all duration-300 cursor-pointer ${
+                        className={`absolute bottom-3   z-10 right-[60px] flex flex-col-reverse justify-end items-end transition-all duration-300 cursor-pointer ${
                             hoveredIndex != 0 &&
                             hoveredIndex != 4 &&
                             'blur-[1px] opacity-40'

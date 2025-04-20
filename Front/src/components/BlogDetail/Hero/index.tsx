@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet'; // Import Helmet
 import SocialShare from '../Socials';
 import GETRequest from '@/helpers/Requests/Query';
 import { useStore } from '@/helpers/StateManegment';
@@ -12,8 +13,76 @@ export default function BlogDetailHero() {
         'blog-detail',
         [language, slug]
     );
+
+    const blogUrl = Blog ? `${window.location.origin}/blog/${Blog.slug}` : ''; // Assuming the full URL for the blog post
+
     return (
         <section className="flex flex-col gap-[40px] py-[40px] lg:px-[100px] md:px-[60px] px-[12px]">
+            {/* Add SEO using Helmet */}
+            <Helmet>
+                <title>{isLoading ? 'Loading...' : Blog?.metaTitle}</title>
+                <meta
+                    name="description"
+                    content={isLoading ? 'Loading...' : Blog?.metaDescription}
+                />
+                <meta name="keywords" content={Blog?.metaKeywords || ''} />
+
+                {/* Canonical URL */}
+                <link rel="canonical" href={blogUrl} />
+
+                {/* Open Graph Tags */}
+                <meta
+                    property="og:title"
+                    content={isLoading ? 'Loading...' : Blog?.metaTitle}
+                />
+                <meta
+                    property="og:description"
+                    content={isLoading ? 'Loading...' : Blog?.metaDescription}
+                />
+                <meta property="og:image" content={Blog?.image || ''} />
+                <meta property="og:url" content={blogUrl} />
+                <meta property="og:type" content="article" />
+                <meta property="og:site_name" content="Your Blog Site Name" />
+
+                {/* Twitter Card Tags */}
+                <meta
+                    name="twitter:title"
+                    content={isLoading ? 'Loading...' : Blog?.metaTitle}
+                />
+                <meta
+                    name="twitter:description"
+                    content={isLoading ? 'Loading...' : Blog?.metaDescription}
+                />
+                <meta name="twitter:image" content={Blog?.image || ''} />
+                <meta name="twitter:card" content="summary_large_image" />
+
+                {/* Robots meta tag to control indexing */}
+                <meta name="robots" content="index, follow" />
+
+                {/* Structured data (Schema.org) for articles */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'BlogPosting',
+                        headline: Blog?.title,
+                        image: Blog?.image,
+                        author: {
+                            '@type': 'Person',
+                            name: 'Author Name', // Replace with the actual author's name
+                        },
+                        publisher: {
+                            '@type': 'Organization',
+                            name: 'Your Blog Site Name',
+                            logo: {
+                                '@type': 'ImageObject',
+                                url: 'Your logo URL', // Replace with your site logo URL
+                            },
+                        },
+                        description: Blog?.metaDescription,
+                    })}
+                </script>
+            </Helmet>
+
             {isLoading ? (
                 <div className="h-[48px] bg-neutral-700 rounded w-[60%] mx-auto animate-pulse" />
             ) : (

@@ -1,27 +1,29 @@
 import GETRequest from '@/helpers/Requests/Query';
-import { ContactInfos, Social, Translates } from '@/helpers/Requests/Types';
+import { ContactInfos, Social } from '@/helpers/Requests/Types';
 import { useStore } from '@/helpers/StateManegment';
 import { Link } from 'react-router-dom';
 import ContactForum from './Forum';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactUsSection() {
     const language = useStore((state: any) => state.Lang);
+    const { t } = useTranslation();
 
     const { data: ContactInfos } = GETRequest<ContactInfos[]>(
         'contact-infos',
         'contact-infos',
         [language]
     );
-    const { data: Translation } = GETRequest<Translates>(
-        'translations',
-        'translations',
-        [language]
-    );
+    // const { data: Translation } = GETRequest<Translates>(
+    //     'translations',
+    //     'translations',
+    //     [language]
+    // );
     const { data: Social } = GETRequest<Social[]>('social', 'social', [
         language,
     ]);
     // const [isLoading, setIsLoading] = useState(false);
-    const isLoading = !Translation || !ContactInfos || !Social;
+    const isLoading = !ContactInfos || !Social;
     if (isLoading) {
         // 🔁 Skeleton version
         return (
@@ -95,11 +97,9 @@ export default function ContactUsSection() {
                     <div className="flex flex-col gap-5  ">
                         {' '}
                         <h2 className="text-5xl font-bold">
-                            {Translation.Contact_title}
+                            {t('Contact_title')}
                         </h2>
-                        <p className="text-base">
-                            {Translation.Contact_Description}
-                        </p>
+                        <p className="text-base">{t('Contact_Description')}</p>
                         <div className="flex flex-col gap-4">
                             {ContactInfos?.map((item, i) => (
                                 <div
@@ -120,7 +120,7 @@ export default function ContactUsSection() {
 
                     <div className="flex flex-col gap-3">
                         <p className="text-base font-semibold">
-                            {Translation.Easy_Contact}:
+                            {t('Easy_Contact')}:
                         </p>
                         <div className="flex flex-row gap-4">
                             {Social.map((item, i) => (

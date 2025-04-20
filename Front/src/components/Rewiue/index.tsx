@@ -49,7 +49,7 @@ export default function ReviueSection() {
                         loading="lazy"
                         src={Data?.image}
                         alt=""
-                        className="w-full object-cover"
+                        className="w-full  aspect-square rounded-2xl  object-cover"
                     />{' '}
                 </div>
             </div>

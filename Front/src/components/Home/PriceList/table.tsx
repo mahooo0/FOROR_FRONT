@@ -15,6 +15,7 @@ import { StoreState, useStore } from '@/helpers/StateManegment';
 import { scrollToId } from '@/helpers/Scroll/ScrollTo';
 import GETRequest from '@/helpers/Requests/Query';
 import { Price_item } from '@/helpers/Requests/Types';
+import { useTranslation } from 'react-i18next';
 
 export default function PricingTable() {
     const language = useStore((state: any) => state.Lang);
@@ -50,7 +51,7 @@ const AnimatedCard = ({ plan, index }: { plan: Price_item; index: number }) => {
         triggerOnce: true,
         threshold: 0.2,
     });
-
+    const { t } = useTranslation();
     useEffect(() => {
         if (inView) {
             controls.start('visible');
@@ -61,7 +62,7 @@ const AnimatedCard = ({ plan, index }: { plan: Price_item; index: number }) => {
         (state: StoreState) => state.setSelectedPriceVariant
     );
 
-    const isGradient = index === 2; // Only first 3 cards get gradient border
+    const isGradient = index === 1; // Only first 3 cards get gradient border
 
     return (
         <motion.div
@@ -81,7 +82,7 @@ const AnimatedCard = ({ plan, index }: { plan: Price_item; index: number }) => {
                         : ' h-full'
                 }
             >
-                <Card className="border border-gray-200 justify-between h-full flex flex-col rounded-2xl">
+                <Card className="border border-gray-200 justify-between h-full flex flex-col shadow-xl rounded-2xl">
                     <CardHeader className="pb-0">
                         <h3 className="text-center text-sm font-medium">
                             {plan.title}
@@ -89,28 +90,30 @@ const AnimatedCard = ({ plan, index }: { plan: Price_item; index: number }) => {
                         <div className="mt-2 text-center w-full">
                             {plan.price === plan.discontedPrice ? (
                                 <span className="text-4xl font-bold">
-                                    ${plan.discontedPrice}
+                                    {plan.discontedPrice === '0'
+                                        ? t('Custom price')
+                                        : plan.discontedPrice + ' ₼'}
                                 </span>
                             ) : (
                                 <span className="text-4xl font-bold flex flex-row">
                                     <p className=" line-through w-1/2 text-end text-2xl flex items-end justify-end">
-                                        ${plan.price}
+                                        {plan.price}
                                     </p>
                                     /
                                     <p className="  w-1/2 text-start">
-                                        ${plan.discontedPrice}
+                                        {plan.discontedPrice}
                                     </p>
                                 </span>
                             )}
 
                             {/* <span className="text-sm text-gray-500">/mo</span> */}
                         </div>
-                        <p className="mt-1 text-center text-xs text-gray-500">
+                        <p className="mt-1  text-sm text-gray-500">
                             {plan.description}{' '}
                         </p>
                     </CardHeader>
                     <CardContent className="pt-6 flex-1">
-                        <ul className="space-y-3 flex flex-col items-center">
+                        <ul className="space-y-3 flex flex-col items-start justify-start">
                             {plan.featrues?.map((feature, featureIndex) => (
                                 <li
                                     key={featureIndex}

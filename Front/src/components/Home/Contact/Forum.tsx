@@ -1,9 +1,10 @@
 import { BlackBtn } from '@/components/Buttons';
 import instanceAxios from '@/helpers/Requests/axios';
 import GETRequest from '@/helpers/Requests/Query';
-import { Price_item, Translates } from '@/helpers/Requests/Types';
+import { Price_item } from '@/helpers/Requests/Types';
 import { StoreState, useStore } from '@/helpers/StateManegment';
 import { useState, ChangeEvent, FormEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 type FormData = {
@@ -16,16 +17,18 @@ type FormData = {
 function ContactForum() {
     const language = useStore((state: any) => state.Lang);
     const navigate = useNavigate();
-    const { data: Translation } = GETRequest<Translates>(
-        'translations',
-        'translations',
-        [language]
-    );
+    // const { data: Translation } = GETRequest<Translates>(
+    //     'translations',
+    //     'translations',
+    //     [language]
+    // );
     const { data: Price_list } = GETRequest<Price_item[]>(
         'priceList',
         'priceList',
         [language]
     );
+    const { t } = useTranslation();
+
     const [formData, setFormData] = useState<FormData>({
         fio: '',
         phoneNumber: '',
@@ -91,7 +94,7 @@ function ContactForum() {
             onSubmit={handleSubmit}
         >
             <div className="xl:col-span-1 col-span-2 h-fit flex flex-col gap-2">
-                <label className="text-base">{Translation?.Fio}</label>
+                <label className="text-base">{t('Fio')}</label>
                 <input
                     type="text"
                     name="fio"
@@ -102,7 +105,7 @@ function ContactForum() {
             </div>
 
             <div className="xl:col-span-1 col-span-2 h-fit flex flex-col gap-2">
-                <label className="text-base">{Translation?.Phone_number}</label>
+                <label className="text-base">{t('Phone_number')}</label>
                 <input
                     type="number" // Changed to text for flexible handling
                     name="phoneNumber"
@@ -118,7 +121,7 @@ function ContactForum() {
             {SelectedPriceVariant !== '0' && (
                 <div className="col-span-2 h-fit flex flex-col gap-2">
                     <label htmlFor="selectField" className="text-base">
-                        {Translation?.SELECT_OPTION}
+                        {t('SELECT_OPTION')}
                     </label>
                     <div className="w-full">
                         <div className="relative h-[48px] w-full rounded-[8px] bg-gradient-to-r from-[#E6D535] to-[#E53535] p-[2px]">
@@ -131,7 +134,7 @@ function ContactForum() {
                                     className="w-full h-full text-base px-[12px] rounded-[8px] border-0 focus:ring-0 focus:outline-none bg-transparent"
                                 >
                                     <option value="">
-                                        {Translation?.SELECT_OPTION}
+                                        {t('SELECT_OPTION')}
                                     </option>
                                     {Price_list &&
                                         Price_list?.map((item) => (
@@ -149,7 +152,7 @@ function ContactForum() {
             )}
 
             <div className="col-span-2 h-fit flex flex-col gap-2">
-                <label className="text-base">{Translation?.Message}</label>
+                <label className="text-base">{t('Message')}</label>
                 <textarea
                     name="message"
                     value={formData.message}
@@ -158,12 +161,7 @@ function ContactForum() {
                 ></textarea>
             </div>
 
-            {Translation && (
-                <BlackBtn
-                    text={Translation?.Submit}
-                    className="col-span-2 h-[48px]"
-                />
-            )}
+            <BlackBtn text={t('Submit')} className="col-span-2 h-[48px]" />
         </form>
     );
 }

@@ -16,7 +16,7 @@ const AnimatedImage = ({ img }: { img: string }) => {
                 duration: 1.5,
                 ease: 'easeInOut',
             }}
-            className="overflow-hidden relative bg-[#222222] rounded-2xl"
+            className="overflow-hidden relative bg-[#222222] rounded-2xl  aspect-square"
         >
             <motion.img
                 initial={{ y: '100%', opacity: 0 }}

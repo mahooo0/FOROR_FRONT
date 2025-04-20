@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import ProjectCard from '../ProjectCard';
 import WhiteBtn from '@/components/Buttons';
 import { useStore } from '@/helpers/StateManegment';
-import { PortfolioResponse } from '@/helpers/Requests/Types';
+import { PortfolioItem } from '@/helpers/Requests/Types';
 import GETRequest from '@/helpers/Requests/Query';
 import { useTranslation } from 'react-i18next';
 
@@ -13,8 +13,9 @@ export default function WorcksSection() {
     const language = useStore((state: any) => state.Lang);
     // const { data: Translation, isLoading: Translationloading } =
     //     GETRequest<Translates>('translations', 'translations', [language]);
-    const { data: partfolio, isLoading: partfolioloading } =
-        GETRequest<PortfolioResponse>('partfolio', 'partfolio', [language]);
+    const { data: partfolio, isLoading: partfolioloading } = GETRequest<
+        PortfolioItem[]
+    >('home-worcks', 'home-worcks', [language]);
     let loading = partfolioloading;
     return (
         <section className="flex flex-col items-center transition-all duration-700 ease-in-out">
@@ -44,9 +45,9 @@ export default function WorcksSection() {
                       ))
                     : partfolio && (
                           <>
-                              <ProjectCard data={partfolio?.data[0]} />
-                              <ProjectCard data={partfolio?.data[1]} />
-                              <ProjectCard data={partfolio?.data[2]} />
+                              <ProjectCard data={partfolio[0]} />
+                              <ProjectCard data={partfolio[1]} />
+                              <ProjectCard data={partfolio[2]} />
                           </>
                       )}
             </div>
