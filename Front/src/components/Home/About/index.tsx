@@ -50,12 +50,6 @@ export default function AboutSection() {
                         </h3>
                         <p className="text-[18px] 2xl:text-lg max-sm:text-base font-medium opacity-60">
                             {About?.description}
-
-                            {/* Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Suspendisse varius enim in eros elementum
-                            tristique. Duis cursus, mi quis viverra ornare, eros
-                            dolor interdum nulla, ut commodo diam libero vitae
-                            erat. */}
                         </p>
                         <Link to={'/about'}>
                             <WhiteBtn
