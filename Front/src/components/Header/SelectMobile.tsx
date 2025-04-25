@@ -45,12 +45,6 @@ export default function MobileSelect({
                         onClick={() => setIsOpen(false)}
                     >
                         <div className="flex flex-row gap-3 hover:bg-black/10 flex-nowrap w-full px-3 overflow-hidden">
-                            <img
-                                loading="lazy"
-                                src="/svg/relume.svg"
-                                className="w-5"
-                                alt=""
-                            />
                             <p>{item.title} </p>
                         </div>
                     </Link>

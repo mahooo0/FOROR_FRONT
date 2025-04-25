@@ -50,7 +50,11 @@ export default function PopUP() {
     return (
         <div className="hidden max-lg:block font_base">
             <button ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
-                <img loading="lazy" src="/svg/headerPOP.svg" alt="" />
+                <img
+                    loading="lazy"
+                    src="/svg/headerPOP.svg"
+                    alt="fooror pop up"
+                />
             </button>
             <div
                 ref={popupRef}

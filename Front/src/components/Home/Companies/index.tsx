@@ -43,7 +43,7 @@ export default function CompaniesSection() {
                               <img
                                   loading="lazy"
                                   src={item.image}
-                                  alt=""
+                                  alt={`Fooror sayt hazirlanmasi şirkəti ${index}`}
                                   className="w-[140px] h-[56px] object-fit"
                               />
                           </div>

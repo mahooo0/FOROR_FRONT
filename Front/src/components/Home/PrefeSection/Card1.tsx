@@ -17,7 +17,7 @@ export default function Card1() {
                 <img
                     loading="lazy"
                     src="/images/Card1.png"
-                    alt=""
+                    alt=" hover image 1"
                     className={`w-full object-cover ${
                         isHover ? 'opacity-100' : ' opacity-0'
                     }  duration-700`}

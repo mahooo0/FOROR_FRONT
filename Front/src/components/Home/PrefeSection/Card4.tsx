@@ -17,7 +17,7 @@ export default function Card4() {
                 <img
                     loading="lazy"
                     src="/images/Card1.png"
-                    alt=""
+                    alt=" hover image 4"
                     className={`w-full object-cover ${
                         isHover ? 'opacity-100' : ' opacity-0'
                     }  duration-700`}
@@ -27,7 +27,7 @@ export default function Card4() {
             <img
                 loading="lazy"
                 src="/svg/ten.svg"
-                alt=""
+                alt=" hover image 5"
                 className=" absolute lg:w-full md:w-1/2 w-full h-full lg:bg-transparent bg-black  top-0 lg:left-0 object-cover"
             />
             {/* <p className="z-10 text-[200px] leading-9 font-semibold">10</p> */}

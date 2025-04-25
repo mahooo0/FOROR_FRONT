@@ -17,7 +17,7 @@ export default function Card3() {
                 <img
                     loading="lazy"
                     src="/images/Card3.png"
-                    alt=""
+                    alt=" hover image 3"
                     className={`w-full object-cover ${
                         isHover ? 'opacity-100' : ' opacity-0'
                     }  duration-700`}
@@ -30,7 +30,7 @@ export default function Card3() {
             <img
                 loading="lazy"
                 src="/images/Phone.png "
-                alt=""
+                alt=" sayt hazırlanması"
                 className={`xl:w-[30%] 2xl:w-[25%] lg:w-[320px] md:w-[36%] w-4/6 object-cover  absolute bottom-[-10%] zl:right-[20%] right-6 ${
                     isHover ? ' rotate-[-20deg] scale-125' : ' opacity-100'
                 }  duration-700`}

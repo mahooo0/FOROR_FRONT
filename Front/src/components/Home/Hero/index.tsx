@@ -43,9 +43,9 @@ export default function Hero() {
                                 ✦  {Hero?.preTitle}
                             </p>
 
-                            <h1 className="xl:text-[44px] lg:text-[36px] md:text-[30px] max-sm:text-[32px] max-lg:text-[36px] font-bold">
+                            <h2 className="xl:text-[44px] lg:text-[36px] md:text-[30px] max-sm:text-[32px] max-lg:text-[36px] font-bold">
                                 {Hero?.title}
-                            </h1>
+                            </h2>
 
                             <h2 className="lg:text-[14px] md:text-[12px] max-sm:text-[11px] max-w-[680px] opacity-60">
                                 {Hero?.description}
@@ -65,7 +65,7 @@ export default function Hero() {
                         <div className="sm:flex hidden xl:w-[70%] w-full flex-row relative">
                             <motion.img
                                 src={`/images/heroMobile_${language}.webp`}
-                                alt="Hero small"
+                                alt="sayt hazırlanması mobil"
                                 className="w-[26%] absolute left-[6%] top-[20%] z-20"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function Hero() {
                             />
                             <motion.img
                                 src={`/images/HeroDesctop_${language}.webp`}
-                                alt="Hero large"
+                                alt="sayt hazırlanması "
                                 className="w-[80%] ml-[20%] z-10"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -92,9 +92,8 @@ export default function Hero() {
                             className="max-sm:block hidden w-[70%] "
                         >
                             <img
-                                loading="lazy"
                                 src={`/images/heroMobile_${language}.webp`}
-                                alt="Hero small"
+                                alt="sayt hazırlanması mobil"
                                 className="w-full"
                             />
                         </motion.div>

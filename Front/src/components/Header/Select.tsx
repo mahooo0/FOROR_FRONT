@@ -41,12 +41,12 @@ export default function HeaderSelect({
                 {options.map((item, i) => (
                     <Link to={item.link} key={i} className="w-full">
                         <div className="flex flex-row gap-3 hover:bg-black/10 flex-nowrap w-full px-6 overflow-hidden">
-                            <img
+                            {/* <img
                                 loading="lazy"
                                 src="/svg/relume.svg"
                                 className="w-5"
                                 alt=""
-                            />
+                            /> */}
                             <p>{item.title} </p>
                         </div>
                     </Link>

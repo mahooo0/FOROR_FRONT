@@ -17,7 +17,7 @@ export default function Card2() {
                 <img
                     loading="lazy"
                     src="/images/Card2.png"
-                    alt=""
+                    alt=" hover image 2"
                     className={`w-[85%] object-cover ${
                         isHover ? 'opacity-100' : ' opacity-0'
                     }  duration-700`}
@@ -41,7 +41,7 @@ export default function Card2() {
                         <img
                             loading="lazy"
                             src="/svg/language.svg"
-                            alt=""
+                            alt="language"
                             className="w-[50px] aspect-square"
                         />{' '}
                         <p> {t('Multi Langulart')}</p>

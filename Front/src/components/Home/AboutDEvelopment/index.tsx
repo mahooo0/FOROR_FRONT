@@ -69,9 +69,9 @@ export default function AboutDevelopmentSection() {
                         <p className="text-base font-semibold 2xl:text-lg">
                             {Data?.preTitle}{' '}
                         </p>
-                        <h3 className="text-4xl 2xl:text-6xl max-sm:text-[32px] font-bold">
+                        <h1 className="text-4xl 2xl:text-6xl max-sm:text-[32px] font-bold">
                             {Data?.title}{' '}
-                        </h3>
+                        </h1>
                         <p className="text-[18px] 2xl:text-xl max-sm:text-base font-medium opacity-60">
                             {Data?.description}
                         </p>
@@ -108,8 +108,9 @@ export default function AboutDevelopmentSection() {
                             initial="hidden"
                             animate={isInView ? 'visible' : 'hidden'}
                             variants={imageVariants}
-                            src="/images/AboutDev3.webp"
+                            src="https://foororsayt.az/images/AboutDev3.webp"
                             alt=""
+                            loading="lazy"
                             className="absolute xl:w-[320px] lg:w-[40%] md:w-[45%] w-[50%] xl:right-[80px] right-0 top-0"
                         />
                         <motion.img
@@ -117,8 +118,9 @@ export default function AboutDevelopmentSection() {
                             initial="hidden"
                             animate={isInView ? 'visible' : 'hidden'}
                             variants={imageVariants}
-                            src="/images/AboutDev2.webp"
+                            src="https://foororsayt.az/images/AboutDev2.webp"
                             alt=""
+                            loading="lazy"
                             className="absolute xl:w-[320px] lg:w-[40%] md:w-[45%] w-[50%] xl:right-[280px] right-[26%] top-[220px] max-sm:top-[80px]"
                         />
                         <motion.img
@@ -126,8 +128,9 @@ export default function AboutDevelopmentSection() {
                             initial="hidden"
                             animate={isInView ? 'visible' : 'hidden'}
                             variants={imageVariants}
-                            src="/images/AboutDev1.webp"
+                            src="https://foororsayt.az/images/AboutDev1.webp"
                             alt=""
+                            loading="lazy"
                             className="absolute xl:w-[320px] lg:w-[40%] md:w-[45%] w-[50%] xl:right-[480px] right-[52%] top-[400px] max-sm:top-[160px]"
                         />
                     </>

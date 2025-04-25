@@ -23,7 +23,7 @@ export default function AboutSection() {
                 <img
                     loading="lazy"
                     src={About?.image}
-                    alt=""
+                    alt=" Fooror sayt hazirlanmasi şirkəti"
                     className=" w-[50%] object-cover max-lg:w-full max-lg:aspect-[2/1] max-md:aspect-square aspect-square rounded-xl"
                 />
             )}

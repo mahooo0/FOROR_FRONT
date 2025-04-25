@@ -24,7 +24,7 @@ export default function Nawbar() {
                     <img
                         loading="lazy"
                         src="/svg/logoMain.svg"
-                        alt=""
+                        alt="fooror logo"
                         className="h-[47px] max-sm:h-[30px]"
                     />
                     <h2 className="font_base text-[32px] max-sm:text-[20px] block max-xl:hidden max-lg:block ">
@@ -39,32 +39,12 @@ export default function Nawbar() {
                 <li className="h-full">
                     <HeaderSelect
                         title={t('Services')}
-                        options={
-                            services?.map((item) => {
-                                return {
-                                    title: item.title,
-                                    link: `/service/${item.slug[language]}`,
-                                };
-                            })
-                            //     [
-                            //     {
-                            //         title: 'Veb saytların hazırlanması',
-                            //         link: '/service/id',
-                            //     },
-                            //     {
-                            //         title: 'Veb saytlara texniki dəstək',
-                            //         link: '/about-development',
-                            //     },
-                            //     {
-                            //         title: 'Korporativ mail xidməti',
-                            //         link: '/about-development',
-                            //     },
-                            //     {
-                            //         title: 'Online ödəmə sistemi inteqrasiyası',
-                            //         link: '/about-development',
-                            //     },
-                            // ]
-                        }
+                        options={services?.map((item) => {
+                            return {
+                                title: item.title,
+                                link: `/service/${item.slug[language]}`,
+                            };
+                        })}
                     />
                 </li>
                 <li className="h-full">

@@ -26,24 +26,17 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />} />
-
                         <Route path="/about" element={<About />} />
-
                         <Route
                             path="/about-development"
                             element={<AboutDevelopment />}
                         />
-
                         <Route path="/service/:slug" element={<Service />} />
-
                         <Route path="/blogs" element={<Blogs />} />
                         <Route path="/blogs/:page" element={<Blogs />} />
                         <Route path="/worcks/:page" element={<Worcks />} />
-
                         <Route path="/blog/:slug" element={<BlogDetail />} />
-
                         <Route path="/price-list" element={<Price />} />
-
                         <Route path="/worcks" element={<Worcks />} />
                         <Route path="/worck/:slug" element={<WorckDetail />} />
                         <Route path="/sucses" element={<Sucses />} />
