@@ -24,7 +24,9 @@ export default function AboutSection() {
                     loading="lazy"
                     src={About?.image}
                     alt=" Fooror sayt hazirlanmasi şirkəti"
-                    className=" w-[50%] object-cover max-lg:w-full max-lg:aspect-[2/1] max-md:aspect-square aspect-square rounded-xl"
+                    // width="500"
+                    // height="300"
+                    className=" w-[50%]   max-lg:w-full    rounded-xl"
                 />
             )}
 
@@ -40,13 +42,10 @@ export default function AboutSection() {
                 ) : (
                     <>
                         <p className="text-base font-semibold 2xl:text-lg">
-                            {/* Who we are? */}
                             {About?.preTitle}
                         </p>
                         <h3 className="text-4xl 2xl:text-4xl max-sm:text-[32px] font-bold">
                             {About?.title}
-
-                            {/* Medium length section heading goes here */}
                         </h3>
                         <p className="text-[18px] 2xl:text-lg max-sm:text-base font-medium opacity-60">
                             {About?.description}

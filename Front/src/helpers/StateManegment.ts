@@ -1,7 +1,9 @@
 import { create } from 'zustand';
 
 export interface StoreState {
+    setcategory: any;
     isMobilePOPupOpen: boolean;
+    category: string;
     setIsMobilePOPupOpen: (isOpen: boolean) => void;
     SelectedPriceVariant: string;
     setSelectedPriceVariant: (variant: string) => void;
@@ -11,6 +13,8 @@ export interface StoreState {
 
 export const useStore = create<StoreState>((set) => ({
     isMobilePOPupOpen: false,
+    category: '',
+    setcategory: (category: string) => set({ category }),
     setIsMobilePOPupOpen: (isOpen: boolean) =>
         set({ isMobilePOPupOpen: isOpen }),
     SelectedPriceVariant: '0',

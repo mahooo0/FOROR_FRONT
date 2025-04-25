@@ -7,13 +7,15 @@ import {
     PortfolioResponse,
 } from '@/helpers/Requests/Types';
 import { useStore } from '@/helpers/StateManegment';
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function Worcks() {
     const language = useStore((state: any) => state.Lang);
-    const [category, setcategory] = useState('');
+    // const [category, setcategory] = useStore('');
+    const category = useStore((state) => state.category) || '';
+    const setcategory = useStore((state) => state.setcategory);
+
     const { page = 1 } = useParams();
 
     // Fetch portfolio data
@@ -58,7 +60,7 @@ export default function Worcks() {
             seoData?.metaKeywords ||
             'web development, portfolio, projects, custom websites',
     };
-
+    const navigate = useNavigate();
     return (
         <HelmetProvider>
             {/* SEO Meta Tags */}
@@ -135,9 +137,10 @@ export default function Worcks() {
                     <CategoryFilter
                         isLoading={Categoryloading}
                         categories={Category}
-                        onCategoryChange={(categoryitem) =>
-                            setcategory(categoryitem)
-                        }
+                        onCategoryChange={(categoryitem) => {
+                            setcategory(categoryitem);
+                            navigate(`/worcks`);
+                        }}
                     />
                 </div>
 

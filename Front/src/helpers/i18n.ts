@@ -62,6 +62,10 @@ i18n.use(LanguageDetector) // optional: detects user language
                     'LEST MAKE A FOROR': "LET'S MAKE A FOR",
                     'Back to Home': 'Back to Home',
                     'Custom price': 'Custom price',
+                    Price_pre_title: 'Affordable Pricing',
+                    Price_title: 'Choose Your Plan',
+                    Price_desc:
+                        "Our pricing is transparent and flexible, designed to offer maximum value for your business needs. Whether you're a startup or an established enterprise, we have a solution that fits your budget.",
                 },
             },
             ru: {
@@ -102,6 +106,10 @@ i18n.use(LanguageDetector) // optional: detects user language
                     'All rights reserved.': 'Все права защищены.',
                     'Back to Home': 'Вернуться на главную',
                     'Custom price': 'Индивидуальная цена',
+                    Price_pre_title: 'Доступные Цены',
+                    Price_title: 'Выберите Ваш План',
+                    Price_desc:
+                        'Наши цены прозрачны и гибки, предназначены для того, чтобы предложить максимальную ценность для потребностей вашего бизнеса. Независимо от того, являетесь ли вы стартапом или устоявшейся компанией, у нас есть решение, соответствующее вашему бюджету.',
                 },
             },
             az: {
@@ -142,6 +150,10 @@ i18n.use(LanguageDetector) // optional: detects user language
                     'All rights reserved.': ' Bütün hüquqlar qorunur.',
                     'Back to Home': 'Ana səhifəyə qayıt',
                     'Custom price': 'Xüsusi qiymət',
+                    Price_pre_title: 'Əlverişli Qiymətlər',
+                    Price_title: 'Öz Planınızı Seçin',
+                    Price_desc:
+                        'Qiymətlərimiz şəffaf və çevikdir, biznes ehtiyaclarınıza maksimum dəyər təklif etmək üçün hazırlanıb. İstər startap, istərsə də təsis edilmiş bir şirkət olun, büdcənizə uyğun bir həllimiz var.',
                 },
             },
         },
@@ -149,9 +161,9 @@ i18n.use(LanguageDetector) // optional: detects user language
 Promise.all([back('en'), back('ru'), back('az')]).then(
     ([enTranslations, ruTranslations, azTranslations]) => {
         // Add the fetched translations to the existing resources
+        i18n.addResourceBundle('az', 'translation', azTranslations, true, true);
         i18n.addResourceBundle('en', 'translation', enTranslations, true, true);
         i18n.addResourceBundle('ru', 'translation', ruTranslations, true, true);
-        i18n.addResourceBundle('az', 'translation', azTranslations, true, true);
     }
 );
 export default i18n;
