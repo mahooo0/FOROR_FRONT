@@ -38,13 +38,13 @@ export default function CompaniesSection() {
                     : colabarations?.map((item, index) => (
                           <div
                               key={index}
-                              className="w-[140px] h-[56px] flex items-center justify-center"
+                              className="w-[140px]  flex items-center justify-center"
                           >
                               <img
                                   loading="lazy"
                                   src={item.image}
                                   alt={`Fooror sayt hazirlanmasi şirkəti ${index}`}
-                                  className="w-[140px] h-[56px] object-fit"
+                                  className="w-[140px]  object-fit"
                               />
                           </div>
                       ))}

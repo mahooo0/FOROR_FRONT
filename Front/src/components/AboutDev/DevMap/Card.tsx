@@ -17,15 +17,16 @@ export default function CardDevMap({
             <img
                 loading="lazy"
                 src={data.image}
-                className=" max-xl:w-[60px]  max-lg:w-[40px] w-[80px] max-xl:bg-white max-xl:rounded-[8px]  aspect-square"
+                className=" max-xl:w-[60px]  max-lg:w-[40px] w-[80px]  max-xl:rounded-[8px]  aspect-square"
                 alt=""
             />
             <h5 className="xl:text-[32px] lg:text-2xl text-2xl font-bold opacity-100">
                 {data.title}{' '}
             </h5>
-            <p className="lg:text-[18px] text-[12px]  xl:opacity-60 opacity-95">
-                {data.description}{' '}
-            </p>
+            <div
+                className="lg:text-[18px] text-[12px]  xl:opacity-60 opacity-95  devStep"
+                dangerouslySetInnerHTML={{ __html: data.description || '' }}
+            ></div>
             {/* <ol className="lg:text-[18px] text-[12px] font-semibold ">
                 <li className="before:content-['•'] before:mr-2">
                     The plan for the subsequent phases of our work.

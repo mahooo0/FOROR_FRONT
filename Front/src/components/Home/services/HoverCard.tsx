@@ -46,10 +46,10 @@ const HoverCard = ({
                                 }`}
                             ></div>
                         </div>
-                        <h4 className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl ml-[60px] text-[32px] transition-all duration-300">
+                        <h3 className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl ml-[60px] text-[32px] transition-all duration-300">
                             {/* Veb saytların hazırlanması */}
                             {data.title}
-                        </h4>
+                        </h3>
 
                         {/* Smooth fade-in for paragraph */}
                         <div className="h-auto overflow-hidden 2xl:max-w-[600px] xl:max-w-[500px] lg:max-w-[400px] md:max-w-[260px]">

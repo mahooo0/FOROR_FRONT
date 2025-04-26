@@ -27,9 +27,9 @@ export default function Nawbar() {
                         alt="fooror logo"
                         className="h-[47px] max-sm:h-[30px]"
                     />
-                    <h2 className="font_base text-[32px] max-sm:text-[20px] block max-xl:hidden max-lg:block ">
+                    <p className="font_base text-[32px] max-sm:text-[20px] block max-xl:hidden max-lg:block ">
                         Fooror
-                    </h2>
+                    </p>
                 </Link>
             </div>
             <ul className="lg:flex flex-row lg:gap-4 font-sans pt-[10px] hidden  xl:text-base min-lg:text-[14px]  font-[500] text-nowrap text-[#222222] items-center h-full">

@@ -28,9 +28,9 @@ export default function WorcksSection() {
                 ) : (
                     <>
                         <h2 className="text-5xl font-bold">{t('Portfolio')}</h2>
-                        <h3 className="text-[18px] max-sm:text-base font-medium opacity-60 xl:max-w-[90%] text-center">
+                        <p className="text-[18px] max-sm:text-base font-medium opacity-60 xl:max-w-[90%] text-center">
                             {t('Portfolio_desc')}
-                        </h3>
+                        </p>
                     </>
                 )}
             </header>

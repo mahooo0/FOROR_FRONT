@@ -47,9 +47,9 @@ export default function Hero() {
                                 {Hero?.title}
                             </h2>
 
-                            <h2 className="lg:text-[14px] md:text-[12px] max-sm:text-[11px] max-w-[680px] opacity-60">
+                            <h4 className="lg:text-[14px] md:text-[12px] max-sm:text-[11px] max-w-[680px] opacity-60">
                                 {Hero?.description}
-                            </h2>
+                            </h4>
 
                             <BlackBtn
                                 action={() => scrollToId('contact')}

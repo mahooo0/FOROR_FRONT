@@ -28,18 +28,7 @@ const Layout = () => {
         runAnimation();
     }, [location.pathname]);
     const scrollRef = useRef<HTMLDivElement | null>(null);
-    // useEffect(() => {
-    //     if (scrollRef.current) {
-    //         scrollInstance.current = new LocomotiveScroll({
-    //             el: scrollRef.current,
-    //             smooth: true,
-    //         } as any);
-    //     }
 
-    //     return () => {
-    //         if (scrollInstance.current) scrollInstance.current.destroy();
-    //     };
-    // }, []);
     return (
         <motion.div
             animate={controls}

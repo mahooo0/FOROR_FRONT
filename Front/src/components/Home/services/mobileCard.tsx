@@ -27,7 +27,7 @@ export default function MobileCard({
                 <div className=" rounded-2xl bg-[#222222] w-full h-fit text-white p-3 flex flex-col gap-[30px]">
                     <p className="text-base">0.00{index}</p>
                     <article className="flex flex-col gap-2 justify-start">
-                        <h4 className="text-2xl">{data.title}</h4>
+                        <h3 className="text-2xl">{data.title}</h3>
                         <p className="text-base opacity-60">
                             {data.short_description}
                         </p>

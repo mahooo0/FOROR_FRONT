@@ -24,3 +24,11 @@ iframe {
 iframe spline-watermark {
     display: none !important;
 }
+.devStep {
+}
+.devStep li::before {
+    content: '•';
+    margin-left: 16px; /* Optional: add some spacing between the bullet and the text */
+    margin-right: 8px; /* Optional: add some spacing between the bullet and the text */
+    margin-top: 4px;
+}

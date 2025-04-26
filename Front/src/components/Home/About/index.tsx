@@ -44,9 +44,9 @@ export default function AboutSection() {
                         <p className="text-base font-semibold 2xl:text-lg">
                             {About?.preTitle}
                         </p>
-                        <h3 className="text-4xl 2xl:text-4xl max-sm:text-[32px] font-bold">
+                        <h2 className="text-4xl 2xl:text-4xl max-sm:text-[32px] font-bold">
                             {About?.title}
-                        </h3>
+                        </h2>
                         <p className="text-[18px] 2xl:text-lg max-sm:text-base font-medium opacity-60">
                             {About?.description}
                         </p>

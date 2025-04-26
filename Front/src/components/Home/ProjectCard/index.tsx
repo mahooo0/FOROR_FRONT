@@ -35,9 +35,9 @@ export default function ProjectCard({ data }: { data: PortfolioItem }) {
             </div>
             <div className="flex w-full flex-1 flex-col justify-between px-5 py-6 md:p-6">
                 <div className="flex w-full flex-col items-start justify-start">
-                    <h2 className="mb-2 text-xl font-bold md:text-2xl">
+                    <h5 className="mb-2 text-xl font-bold md:text-2xl">
                         {data.title}
-                    </h2>
+                    </h5>
                     <p>{data.description}</p>
 
                     <div className="flex flex-wrap gap-2 mt-4">

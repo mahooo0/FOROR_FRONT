@@ -133,7 +133,7 @@ export default function Service() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
-                    className="p-[36px] text-[18px] rounded-3xl shadow-2xl"
+                    className="p-[36px] text-[18px] rounded-3xl shadow-2xl devStep"
                     dangerouslySetInnerHTML={
                         Data && { __html: Data.description }
                     }
