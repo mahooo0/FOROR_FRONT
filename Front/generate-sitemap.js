@@ -54,7 +54,7 @@ const generateSitemap = async () => {
         for (const lang of ['az', 'en', 'ru']) {
             if (post.slug[lang]) {
                 urls.push({
-                    url: `/blogs/${post.slug[lang]}`,
+                    url: `/blog/${post.slug[lang]}`,
                     lastmod: now,
                     changefreq: 'weekly',
                     priority: 0.8,

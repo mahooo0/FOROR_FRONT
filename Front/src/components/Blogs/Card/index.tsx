@@ -38,7 +38,10 @@ export const BlogCard: React.FC<BlogCardProps> = ({
                 <a className="mb-2" href={url}>
                     <h2 className="text-xl font-bold md:text-2xl">{title}</h2>
                 </a>
-                <p>{description}</p>
+                <div
+                    dangerouslySetInnerHTML={{ __html: description }}
+                    className=" line-clamp-2"
+                ></div>
             </div>
         </div>
     );

@@ -42,7 +42,7 @@ export default function BlogDetailHero() {
                 <meta property="og:image" content={Blog?.image || ''} />
                 <meta property="og:url" content={blogUrl} />
                 <meta property="og:type" content="article" />
-                <meta property="og:site_name" content="Your Blog Site Name" />
+                <meta property="og:site_name" content="foororsayt.az" />
 
                 {/* Twitter Card Tags */}
                 <meta
