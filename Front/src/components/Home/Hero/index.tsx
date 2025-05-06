@@ -9,7 +9,6 @@ import { Bunner } from '@/helpers/Requests/Types';
 export default function Hero() {
     const language = useStore((state: any) => state.Lang);
     const { t } = useTranslation();
-
     const { data: Hero, isLoading: loading } = GETRequest<Bunner>(
         'home/hero',
         'home/hero',
@@ -65,7 +64,7 @@ export default function Hero() {
                         <div className="sm:flex hidden xl:w-[70%] w-full flex-row relative">
                             <motion.img
                                 src={`/images/heroMobile_${language}.webp`}
-                                alt="sayt hazırlanması mobil"
+                                alt="Sayt hazırlanması xidməti"
                                 className="w-[26%] absolute left-[6%] top-[20%] z-20"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -93,7 +92,7 @@ export default function Hero() {
                         >
                             <img
                                 src={`/images/heroMobile_${language}.webp`}
-                                alt="sayt hazırlanması mobil"
+                                alt="Sayt hazırlanması xidməti"
                                 className="w-full"
                             />
                         </motion.div>
